@@ -1,0 +1,29 @@
+.boot-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #060a0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  transition: opacity .5s ease;
+}
+.boot-overlay.boot-exit { opacity: 0; pointer-events: none; }
+
+.boot-window {
+  font-family: var(--font-display);
+  font-size: 14px;
+  line-height: 1.9;
+  color: #b6f7d9;
+  width: min(560px, 100%);
+}
+.boot-cmd { color: #00ff9c; }
+.boot-cmd::before { content: ''; }
+.boot-out { color: #8fa8a0; padding-left: 0; margin-bottom: 6px; }
+.boot-cursor {
+  display: inline-block;
+  color: #00ff9c;
+  animation: blink 1s steps(1) infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }

@@ -1,0 +1,50 @@
+:root {
+  /* Display & body type */
+  --font-display: 'JetBrains Mono', 'SFMono-Regular', Menlo, monospace;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Layout */
+  --maxw: 1180px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 18px;
+
+  /* Accents — shared across themes */
+  --accent: #00ff9c;
+  --accent-dim: #00c97e;
+  --accent-blue: #5b8dee;
+  --danger: #ff5c5c;
+  --warn: #ffb648;
+}
+
+/* ---------- DARK THEME (terminal) ---------- */
+[data-theme='dark'] {
+  --bg: #0a0e14;
+  --bg-elevated: #0f141d;
+  --surface: #121826;
+  --surface-2: #161e2c;
+  --border: #232c3d;
+  --text: #e6edf3;
+  --text-muted: #8b98a8;
+  --text-faint: #5a6577;
+  --shadow: 0 20px 60px -20px rgba(0, 255, 156, 0.08);
+  --grid-line: rgba(255, 255, 255, 0.04);
+  --code-bg: #0d1117;
+}
+
+/* ---------- LIGHT THEME (clean SaaS) ---------- */
+[data-theme='light'] {
+  --bg: #f5f7fa;
+  --bg-elevated: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #eef1f6;
+  --border: #dde3ec;
+  --text: #131a26;
+  --text-muted: #4d5a6b;
+  --text-faint: #8590a1;
+  --shadow: 0 20px 60px -20px rgba(20, 30, 60, 0.18);
+  --grid-line: rgba(10, 20, 40, 0.045);
+  --code-bg: #0d1117;
+  --accent: #00b377;
+  --accent-dim: #00925f;
+}

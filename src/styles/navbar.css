@@ -1,0 +1,115 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 22px 0;
+  transition: padding .3s ease, background .3s ease, border-color .3s ease;
+  border-bottom: 1px solid transparent;
+}
+.navbar-scrolled {
+  padding: 14px 0;
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  backdrop-filter: blur(14px);
+  border-bottom-color: var(--border);
+}
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-logo {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+}
+.navbar-logo-bracket { color: var(--accent); }
+
+.navbar-links {
+  display: flex;
+  gap: 28px;
+}
+.navbar-links button {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-family: var(--font-display);
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  padding: 4px 0;
+  position: relative;
+  transition: color .2s ease;
+}
+.navbar-links button:hover { color: var(--text); }
+.navbar-links button::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -4px;
+  width: 0; height: 1px;
+  background: var(--accent);
+  transition: width .25s ease;
+}
+.navbar-links button:hover::after { width: 100%; }
+
+.navbar-actions { display: flex; align-items: center; gap: 14px; }
+
+.theme-toggle {
+  width: 52px;
+  height: 28px;
+  border-radius: 100px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  position: relative;
+  padding: 2px;
+}
+.theme-toggle-knob {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #06140e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  transition: transform .3s ease;
+  transform: translateX(0);
+}
+.theme-toggle-knob.is-light { transform: translateX(22px); }
+
+.navbar-burger {
+  display: none;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  width: 36px; height: 36px;
+  color: var(--text);
+}
+
+.navbar-mobile {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .navbar-links { display: none; }
+  .navbar-burger { display: flex; align-items: center; justify-content: center; }
+  .navbar-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px 24px 20px;
+    border-top: 1px solid var(--border);
+    background: var(--bg);
+  }
+  .navbar-mobile button {
+    text-align: left;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-family: var(--font-display);
+    padding: 10px 0;
+    font-size: 14px;
+  }
+}
