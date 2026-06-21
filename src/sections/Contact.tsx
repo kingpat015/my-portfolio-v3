@@ -22,9 +22,15 @@ export default function Contact() {
             </p>
 
             <div className="contact-socials">
-              <a href="#" aria-label="GitHub"><i className="pi pi-github" /></a>
-              <a href="#" aria-label="LinkedIn"><i className="pi pi-linkedin" /></a>
-              <a href="mailto:patrick@example.com" aria-label="Email"><i className="pi pi-envelope" /></a>
+              <a href="https://github.com/kingpat015" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <i className="pi pi-github" />
+              </a>
+              <a href="https://www.linkedin.com/in/patrick-leimuel-aganos-0a4609221" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <i className="pi pi-linkedin" />
+              </a>
+              <a href="mailto:kingpatrickleimuel15@gmail.com" aria-label="Email">
+                <i className="pi pi-envelope" />
+              </a>
             </div>
           </Reveal>
 
